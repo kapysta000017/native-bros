@@ -1,0 +1,79 @@
+.auth {
+  &__label_username {
+    @include label;
+  }
+  &__field_username {
+    @include field;
+    margin-bottom: 32px;
+    margin-top: 8px;
+  }
+  &__label_password {
+    @include label;
+  }
+  &__field_password {
+    @include field;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+  &__condition_password {
+    font-family: 'Regular';
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+  }
+}
+
+.label-input {
+  margin-top: 32px;
+  &__label {
+    @include label;
+  }
+  &__field {
+    @include field;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    outline: none;
+  }
+  &__field:focus {
+    border: 2px solid #7a5cfa;
+  }
+  &__warning-password {
+    font-family: 'Regular';
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(235, 87, 87, 1);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  &__next {
+    @include button;
+    background: #ffffff;
+    color: #7a5cfa;
+  }
+  &__cancel {
+    @include button;
+    background: #7a5cfa;
+    color: #ffffff;
+  }
+  &__label {
+    @include label;
+  }
+}
+
+.drop {
+  margin: 32px 0px;
+  &__label {
+    @include label;
+  }
+  &__select {
+    @include field;
+    margin-top: 8px;
+  }
+  &__option-item {
+    background: #ffffff;
+    padding: 100px;
+  }
+}

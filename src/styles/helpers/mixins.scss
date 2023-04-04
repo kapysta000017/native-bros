@@ -1,0 +1,29 @@
+@mixin field {
+  font-family: 'Regular';
+  padding: 16px;
+  width: 564px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+@mixin label {
+  font-family: 'SemiBold';
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+}
+
+@mixin button {
+  padding: 16px;
+  width: 172px;
+  height: 56px;
+  border: 1px solid #7a5cfa;
+  border-radius: 8px;
+  font-family: 'Regular';
+  font-size: 16px;
+}

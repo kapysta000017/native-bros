@@ -1,0 +1,19 @@
+form(id="form")
+  .auth
+    label.auth__label_username Username
+      input.auth__field_username(type="text" placeholder="Enter username" name="username")
+    label.auth__label_password Password
+      input.auth__field_password(type="password" placeholder="Enter password" name="password")
+      span.auth__condition_password Your password is between 4 and 12 characters
+  .label-input
+    label.label-input__label Input Text Label
+      input.label-input__field(type="text" placeholder="Type here" name="valueLabel")
+      div.label-input__warning-password
+  .drop
+    label.drop__label Dropdown Title
+    select(name="options").drop__select
+      each variable in [{id: "1", name: "first"}, {id: "2", name: "second"}, {id: "3", name: "third"}]
+        option.drop__option-item(value=variable.id) #{variable.name}
+  .buttons
+    button.buttons__next Next
+    button.buttons__cancel Cancel
