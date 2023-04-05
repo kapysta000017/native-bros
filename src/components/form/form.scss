@@ -206,7 +206,8 @@
 
 .radio {
   margin-top: 32px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 28px;
   &__default {
     position: absolute;
