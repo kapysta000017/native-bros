@@ -5,6 +5,7 @@ const inputLabel = document.querySelector('.label-input__field');
 const wrapperInputLabel = document.querySelector('.label-input__label');
 const form = document.getElementById('form');
 const resetButton = document.querySelector('.buttons__button_clear');
+const isCheckbox = document.querySelector('.checkbox__default');
 
 form.addEventListener('submit', logSubmit);
 function logSubmit(event) {
@@ -20,6 +21,8 @@ function logSubmit(event) {
       password: event.target.password.value,
       valueLabel: event.target.valueLabel.value,
       option: elSelectCustomValue.getAttribute('data'),
+      isCheckbox: isCheckbox.checked,
+      radio: event.target.rd.value,
     });
   }
 
