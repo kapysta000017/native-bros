@@ -9,11 +9,33 @@ form(id="form")
     label.label-input__label Input Text Label
       input.label-input__field(type="text" placeholder="Type here" name="valueLabel")
       div.label-input__warning-password
-  .drop
-    label.drop__label Dropdown Title
-    select(name="options").drop__select
-      each variable in [{id: "1", name: "first"}, {id: "2", name: "second"}, {id: "3", name: "third"}]
-        option.drop__option-item(value=variable.id) #{variable.name}
+  .checkbox
+    label.checkbox__label
+      input.checkbox__default(type="checkbox")
+      span.checkbox__style
+      span.checkbox__name Remember me
+  .radio
+    label.radio__label
+      input.radio__default(type="radio" name="rd" value="first")
+      span.radio__style
+      span.radio__name Radio selection 1
+    label.radio__label
+      input.radio__default(type="radio" name="rd" value="second")
+      span.radio__style
+      span.radio__name Radio selection 2
+    label.radio__label
+      input.radio__default(type="radio" name="rd" value="third")
+      span.radio__style
+      span.radio__name Radio selection 3
+  .select
+    span.select__label Select
+    .select__wrapper
+      div(class="select__custom select__custom-js")
+        div(class="select__custom-trigger" id="custom-trigger")
+        .select__custom-options
+          div(class="select__custom-option" data="ds") first
+          div(class="select__custom-option" data="fe") second
+          div(class="select__custom-option" data="be") third
   .buttons
-    button.buttons__next Next
-    button.buttons__cancel Cancel
+    button(class="buttons__button_clear" type="reset") Clear
+    button(class="buttons__button_go" type="submit") Go

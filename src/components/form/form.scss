@@ -1,3 +1,15 @@
+%arrowSvg {
+  content: '';
+  background-image: url(./../../assets/images/arrow.svg);
+  width: 13px;
+  height: 8px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 22px;
+  line-height: 54px;
+  right: 0.8rem;
+}
+
 .auth {
   &__label_username {
     @include label;
@@ -6,6 +18,10 @@
     @include field;
     margin-bottom: 32px;
     margin-top: 8px;
+    outline: none;
+  }
+  &__field_username:focus {
+    border: 1px solid #7a5cfa;
   }
   &__label_password {
     @include label;
@@ -14,6 +30,10 @@
     @include field;
     margin-bottom: 8px;
     margin-top: 8px;
+    outline: none;
+  }
+  &__field_password:focus {
+    border: 1px solid #7a5cfa;
   }
   &__condition_password {
     font-family: 'Regular';
@@ -25,8 +45,10 @@
 
 .label-input {
   margin-top: 32px;
+  width: 564px;
   &__label {
     @include label;
+    position: relative;
   }
   &__field {
     @include field;
@@ -35,7 +57,18 @@
     outline: none;
   }
   &__field:focus {
-    border: 2px solid #7a5cfa;
+    border: 1px solid #7a5cfa;
+  }
+  &__warning-svg::after {
+    content: '';
+    background-image: url(./../../assets/images/warning.svg);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 44px;
+    line-height: 54px;
+    right: 0.8rem;
   }
   &__warning-password {
     font-family: 'Regular';
@@ -43,17 +76,20 @@
     line-height: 18px;
     color: rgba(235, 87, 87, 1);
   }
+  &__warning-border {
+    border: 2px solid #eb5757;
+  }
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
-  &__next {
+  &__button_clear {
     @include button;
     background: #ffffff;
     color: #7a5cfa;
   }
-  &__cancel {
+  &__button_go {
     @include button;
     background: #7a5cfa;
     color: #ffffff;
@@ -63,17 +99,150 @@
   }
 }
 
-.drop {
+.select {
   margin: 32px 0px;
+  position: relative;
   &__label {
     @include label;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
   }
-  &__select {
+  &__wrapper {
+    position: relative;
+  }
+  &__custom {
+    position: relative;
+    height: 56px;
+  }
+  &__custom-trigger {
     @include field;
-    margin-top: 8px;
+    font-size: 16px;
+    position: relative;
+    height: 100%;
+    line-height: 20px;
   }
-  &__option-item {
+  &__custom-trigger:hover {
+    border: 1px solid #7a5cfa;
+  }
+  &__custom-options {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    left: 0;
+    width: 564px;
+    border: 1px solid #cccccc;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px #e9e1f8;
+  }
+  &__custom-option {
+    font-family: 'Regular';
+    position: relative;
+    padding: 16px;
+    border-bottom: 1px solid #d3d3d3;
+    color: #666666;
+  }
+  &__custom-option:hover {
+    color: #ffffff;
+    background: #7a5cfa;
+  }
+  &__isActive &__custom-options {
+    display: block;
+  }
+}
+
+#custom-trigger::after {
+  @extend %arrowSvg;
+  transform: rotate(180deg);
+}
+
+#custom-trigger.select__custom-trigger_arrow::after {
+  @extend %arrowSvg;
+  transform: rotate(0deg);
+}
+
+.checkbox {
+  &__default {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  &__label {
+    position: relative;
+    padding-left: 39px;
+  }
+  &__style {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
     background: #ffffff;
-    padding: 100px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+  }
+  &__default:checked + &__style::after {
+    content: '';
+    position: absolute;
+    background-image: url(./../../assets/images/check.svg);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__name {
+    position: relative;
+    top: 3px;
+    font-family: 'Regular';
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+  }
+}
+
+.radio {
+  margin-top: 32px;
+  display: grid;
+  gap: 28px;
+  &__default {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  &__label {
+    position: relative;
+    padding-left: 39px;
+  }
+  &__style {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    border-radius: 50%;
+  }
+  &__default:checked + &__style::after {
+    content: '';
+    position: absolute;
+    background-color: #7a5cfa;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  &__name {
+    font-family: 'Regular';
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
   }
 }
