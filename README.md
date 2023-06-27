@@ -1,4 +1,4 @@
-# Gulp-сборка
+бэм
 блок не зависит от реализации других, не должно быть отступов, границ, позиционирования, внешняя геометрия вляющая на размеры
 
 flex это позиционирование, как в примере шапку переносили?
@@ -58,4 +58,5 @@ input и button не должны иметь внешней геометрии �
 </div>
 ```
 
-![Снимок.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a6c5de6-c2e7-48b2-8a20-a0576c5a45eb/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.png)
+[![Снимок.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a6c5de6-c2e7-48b2-8a20-a0576c5a45eb/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.png)
+](https://file.notion.so/f/s/3a6c5de6-c2e7-48b2-8a20-a0576c5a45eb/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.png?id=2da130bc-d7a8-4f27-a154-d4adab9c0a61&table=block&spaceId=5393c082-4838-4d3f-af80-523c8a89fde9&expirationTimestamp=1687957817578&signature=xDHvcYywRvTfhTW6EmqSxdD5CbjxgEU2IelxJPq9EVA&downloadName=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.PNG.png)https://file.notion.so/f/s/3a6c5de6-c2e7-48b2-8a20-a0576c5a45eb/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.png?id=2da130bc-d7a8-4f27-a154-d4adab9c0a61&table=block&spaceId=5393c082-4838-4d3f-af80-523c8a89fde9&expirationTimestamp=1687957817578&signature=xDHvcYywRvTfhTW6EmqSxdD5CbjxgEU2IelxJPq9EVA&downloadName=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.PNG.png
